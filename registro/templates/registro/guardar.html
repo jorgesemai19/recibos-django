@@ -1,0 +1,97 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'registro/auto.css' %}">
+  <title>Formulario de horas extras</title>
+  <nav>
+    <ul>
+      <a title="" href="http://127.0.0.1:8000/menu/"><img width="100" height="100" src=https://scontent.fasu1-1.fna.fbcdn.net/v/t1.0-9/12227223_1390388247929201_4422764421024477119_n.jpg?_nc_cat=109&_nc_ht=scontent.fasu1-1.fna&oh=de28224200b9c8f4cc1575ff96f97dda&oe=5CADA1E1 alt="MVA" /></a>
+        <form class="logout-link" action="http://127.0.0.1:8000/login/logout/" method="post">
+          {% csrf_token %}
+          <button type="submit">logout</button>
+        </form>
+    </ul>
+  </nav>
+</head>
+
+<body>
+<center><h1>Datos del personal</h1>
+<form name="form1" method="post" action="http://127.0.0.1:8000/registro/guardar/">
+  {% csrf_token %}
+  <table border="0" align="center">
+    <tr>
+      <td>Identificador del personal</td>
+      <td><label for="id"></label>
+        {% for p in nombres2 %}
+          <input name="id" id="id" type="text"  value="{{ p.id }}"/></td>
+        {% endfor %}
+      <tr>
+    <tr>
+      <td>C.I.</td>
+      <td><label for="ci"></label>
+        {% for p in nombres2 %}
+          <input name="ci" id="ci" type="text"  value="{{ p.cedula }}"/></td>
+        {% endfor %}
+      <tr>
+      <td>Nombre</td>
+      <td><label for="nombre"></label>
+        {% for p in nombres2 %}
+          <input name="nombre" id="nombre" type="text"  value="{{ p.nombre }}"/></td>
+        {% endfor %}
+      </td>
+    </tr>
+    <tr>
+      <td>Apellido</td>
+      <td><label for="apellido"></label>
+        {% for p in nombres2 %}
+          <input name="apellido" id="apellido" type="text"  value="{{ p.apellido }}"/></td>
+        {% endfor %}
+      </td>
+    </tr>
+    <tr>
+      <td>Fecha de trabajo</td>
+      <td><label for="fecha"></label>
+      <input type="date" name="fecha"></td>
+    </tr>
+    <tr>
+      <td>Monto</td>
+      <td><label for="monto"></label>
+      <input type="text" name="monto" id="monto" placeholder="ej:15000"></td>
+    </tr>
+    <tr>
+      <td>Dependencia</td>
+      <td><label for="dependencia"></label>
+      <select name="dependencia" id="dependencia">
+          {% for d in depen %}
+            <option value="{{ d.id }}">{{ d.nombre_dependencia }}</option>
+          {% endfor %}
+      </select>
+    </tr>
+    <tr>
+      <td>Concepto</td>
+      <td><label for="concepto"></label>
+      <select name="concepto" id="concepto">
+          {% for c in concep %}
+            <option value="{{ c.id }}">{{ c.concepto_def }}</option>
+          {% endfor %}
+      </select>
+    </tr>
+    <tr>
+      <td>Descripcion</td>
+      <td><label for="descripcion"></label>
+      <textarea name="descripcion" rows="5" cols="50"></textarea>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="center"><input type="submit"  value="registrar"></td>
+      <td align="center"><input type ="reset" value="limpiar"></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

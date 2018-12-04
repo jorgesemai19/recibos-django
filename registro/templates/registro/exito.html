@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="{% static 'registro/reg.css' %}">
+<title>Formulario de horas extras</title>
+<nav>
+  <ul>
+      <form class="logout-link" action="http://127.0.0.1:8000/login/logout/" method="post">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+      </form>
+  </ul>
+</nav>
+</head>
+<body>
+
+    <h1>Guardado correctamente</h1>
+    <h1>Desea agregar otro registro?</h1>
+    <a href="http://127.0.0.1:8000/registro/"> <h1>SI</h1> </a> <a href="http://127.0.0.1:8000/menu/"> <h1>NO</h1> </a>
+
+</body>
+</html>

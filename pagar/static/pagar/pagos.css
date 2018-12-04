@@ -1,0 +1,55 @@
+body{
+
+  margin:0;
+  color:#6a6f8c;
+  background:url('fondo.jpg');
+  font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+center {
+    text-align:center;
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+
+h1{
+  line-height: 1;
+  color: #fff;
+  font-size: 60px;
+}
+h2{
+  line-height: 1;
+  color: #fff;
+  font-style: bold;
+  font-size: 50px;
+}
+input[type="text"] {
+    line-height: 1;
+    width: 400px;
+    height: 30px;
+}
+button {
+    line-height: 2;
+    background-color: #000 ; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+h3{
+  text-align:justify;
+  line-height: 1;
+  color: #fff;
+  font-style: bold;
+  font-size: 25px;
+}
+.logout-link{
+  margin:40px;
+  text-align:right;
+}

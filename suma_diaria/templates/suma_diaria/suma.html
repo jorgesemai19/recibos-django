@@ -1,0 +1,55 @@
+{% load staticfiles  %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="{% static 'pagos_pendientes\pen.css' %}">
+
+  <head>
+    <img href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdHBpe1ItUo0Kxj9RPD_Tvht_YMS4VEan-HEe5QIhbBm5CuAL">
+    <meta charset="utf-8">
+    <nav>
+      <ul>
+        <a title="" href="http://127.0.0.1:8000/menu/"><img width="100" height="100" src=https://scontent.fasu1-1.fna.fbcdn.net/v/t1.0-9/12227223_1390388247929201_4422764421024477119_n.jpg?_nc_cat=109&_nc_ht=scontent.fasu1-1.fna&oh=de28224200b9c8f4cc1575ff96f97dda&oe=5CADA1E1 alt="MVA" /></a>
+          <form class="logout-link" action="http://127.0.0.1:8000/login/logout/" method="post">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+          </form>
+      </ul>
+    </nav>
+    <title>homepage</title>
+  </head>
+  <body>
+    <table class="egt">
+
+  <tr>
+
+    <th scope="row"><h2>Datos del personal</h2></th>
+
+    <th><h2>Fecha de trabajo realizado</h2></th>
+
+    <th><h2>Fecha de registro</h2></th>
+
+    <th><h2>Monto</h2></th>
+
+  </tr>
+  {% for list in lista %}
+    <tr>
+      <th> <h2>{{ list.personal_id }}</h2></th>
+      <th><h2>{{ list.fecha_realizado }}</h2></th>
+      <th><h2>{{ list.fecha_registro }}</h2></th>
+      <th><h2>{{ list.monto }}</h2></th>
+    </tr>
+  {% endfor %}
+  <tr>
+    <th> <h2>Suma</h2></th>
+    <th><h2>/</h2></th>
+    <th><h2>/</h2></th>
+    <th><h2>{{sumatotal}}</h2></th>
+  </tr>
+
+  <h2>{{ dateFormat }}</h2>
+
+</table>
+
+  </body>
+</html>

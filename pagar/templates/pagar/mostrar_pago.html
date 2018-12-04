@@ -1,0 +1,36 @@
+{% load staticfiles  %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'pagar\pagos.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <nav>
+      <ul>
+        <li>
+          <form class="logout-link" action="http://127.0.0.1:8000/login/logout/" method="post">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+    <title>pago de horas extras</title>
+  </head>
+  <body>
+    <center>{% for i in p %}
+      <h3>Nombre: {{ i.nombre }}</h3>
+      <h3>Apellido: {{ i.apellido }}</h3>
+      <h3>Cedula: {{ i.cedula }}</h3>
+      <h3>Fecha de emision: {{ dateFormat }}</h3>
+    {% endfor %}
+    {% for k in li|slice:":1" %}
+      <h3>Monto a pagar : {{ adicion }}</h3>
+      <h3>Dependencia: {{ k.dependencia_id }}</h3>
+    {% endfor %}
+    <h3>Concepto:</h3>
+    {% for j in li %}
+      <h3>   *  {{ j.concepto_id }} de {{ j.fecha_realizado }} /</h3>
+    {% endfor %}</center>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{% load staticfiles  %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="{% static 'login\login.css' %}">
+
+  <head>
+    <img href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdHBpe1ItUo0Kxj9RPD_Tvht_YMS4VEan-HEe5QIhbBm5CuAL">
+    <meta charset="utf-8">
+    <nav>
+      <ul>
+          <form class="logout-link" action="http://127.0.0.1:8000/login/logout/" method="post">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+          </form>
+      </ul>
+    </nav>
+    <title>menu</title>
+  </head>
+  <body>
+  <center>
+    <button type="button" name="button"><a href="http://127.0.0.1:8000/registro/"><h2> Registrar</h2></a></button><br>
+    <button type="button" name="button"><a href="http://127.0.0.1:8000/pagar/"><h2> Pagar </h2></a></button><br>
+    <button type="button" name="button"><a href="http://127.0.0.1:8000/buscar/"><h2> Buscar</h2></a></button><br>
+    <button type="button" name="button"><a href="http://127.0.0.1:8000/suma_diaria/"><h2> Suma Diaria</h2></a></button><br>
+    <button type="button" name="button"><a href="http://127.0.0.1:8000/pagos_pendientes/"><h2> Pagos Pendientes</h2></a></button><br>
+</center>
+  </body>
+</html>

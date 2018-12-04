@@ -1,0 +1,35 @@
+body{
+  margin:0;
+  color:#6a6f8c;
+  background:url(http://fondosparacelulares.net/wp-content/uploads/2014/07/211691.jpg);
+  font:1200 30px/18px 'Open Sans',sans-serif;
+}
+
+{color:inherit;text-decoration:none}
+
+form{
+  color:#ffffff;
+  font-family: Verdana ;
+  color:#ffffff;
+  font-style: bold;
+}
+
+h1{
+  font-family: Verdana ;
+  color:#ffffff;
+  font-style: bold;
+}
+h2{
+  font-family: Verdana ;
+  color:#ffffff;
+  font-style: bold;
+}
+
+td{
+  font-family: Verdana ;
+  color:#ffffff;
+  font-size:20px
+}
+select{
+  background:#fff;width:173px;height:25px;
+}

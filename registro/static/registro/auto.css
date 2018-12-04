@@ -1,0 +1,40 @@
+body{
+  margin:0;
+  color:#6a6f8c;
+  background:url('fondo.jpg');
+  margin:0;
+  color:#6a6f8c;
+  font:1200 30px/18px 'Open Sans',sans-serif;
+}
+
+button {
+    line-height: 2;
+    background-color: #000 ; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+h1{
+  color:white;
+  font-size:50px;
+}
+
+label {
+  color:white;
+}
+
+td{
+  color:white;
+  font-size:25px;
+}
+.logout-link{
+  margin:40px;
+  text-align:right;
+}

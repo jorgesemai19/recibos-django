@@ -1,0 +1,39 @@
+{% load staticfiles  %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'buscar\estilo_buscar.css' %}">
+    <meta charset="utf-8">
+    <nav>
+      <div class="navegador">
+        <ul>
+          <a href="http://127.0.0.1:8000/menu/"> <img width="100" height="100" src=https://scontent.fasu1-1.fna.fbcdn.net/v/t1.0-9/12227223_1390388247929201_4422764421024477119_n.jpg?_nc_cat=109&_nc_ht=scontent.fasu1-1.fna&oh=de28224200b9c8f4cc1575ff96f97dda&oe=5CADA1E1 alt="MVA" /> </a>
+            <form class="logout-link" action="http://127.0.0.1:8000/login/logout/" method="post">
+              {% csrf_token %}
+              <button type="submit">logout</button>
+            </form>
+        </ul>
+      </div>
+    </nav>
+    <title>BUSCAR HORAS EXTRAS</title>
+  </head>
+  <body>
+
+    <center><form class="site-form" action="http://127.0.0.1:8000/buscar/muestra/" method="post">
+      <table>
+        <tr>
+        <td>
+          <h2>Insertar cedula</h2>
+          <input name="ced" id="ced" type="text"  value=""/></td>
+        </td>
+      </tr>
+        <tr>
+          {% csrf_token %}
+          <td> <input type="submit" value="Buscar"> </td>
+        </tr>
+      </table>
+    </form></center>
+
+  </body>
+</html>

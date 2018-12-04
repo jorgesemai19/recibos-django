@@ -1,0 +1,62 @@
+body{
+
+  margin:0;
+  color:#6a6f8c;
+  background:url('fondo.jpg');
+  font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+h1{
+  line-height: 1;
+  color: #fff;
+  font-size: 60px;
+}
+.site-form{
+  margin-top:60px;
+  font-size:30px;
+  color:white;
+  padding:20px;
+}
+.site-form input{
+  margin:20px;
+  padding: 10px;
+}
+button {
+    line-height: 2;
+    background-color: #000 ; /* black */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+center {
+    text-align:center;
+    margin: auto;
+    width: 25%;
+    padding: 50px;
+}
+
+h1{
+  line-height: 1;
+  color: #fff;
+  font-size: 60px;
+}
+h2{
+  line-height: 1;
+  color: #fff;
+  font-style: bold;
+  font-size: 40px;
+}
+input[type="text"] {
+    line-height: 1;
+    width: 400px;
+    height: 30px;
+}
+
+.logout-link{
+  margin:40px;
+  text-align:right;
+}
